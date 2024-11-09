@@ -58,23 +58,33 @@ function buildCharts(sample) {
       yaxis: { title: 'Sample Values' }
     };
 
+    // Render the Bubble Chart
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
 
-    // Render the Bubble Chart
-
-
+  
     // For the Bar Chart, map the otu_ids to a list of strings for your yticks
-
-
     // Build a Bar Chart
     // Don't forget to slice and reverse the input data appropriately
-
-
     // Render the Bar Chart
+    let barTrace = {
+      x: sample_values.slice(0, 10).reverse(), // Get top 10 values
+      y: otu_ids.slice(0, 10).map(id => `OTU ${id}`).reverse(), // Map to strings
+      text: otu_labels.slice(0, 10).reverse(),
+      type: 'bar'
+    };
 
+    let barData = [barTrace];
+
+    let barLayout = {
+      title: 'Top 10 OTUs',
+      xaxis: { title: 'Sample Values' },
+      yaxis: { title: 'OTU IDs' }
+    };
+
+    Plotly.newPlot('bar', barData, barLayout);
   });
-}
+  };
 
 // Function to run on page load
 function init() {
