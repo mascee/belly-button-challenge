@@ -5,5 +5,7 @@ In this challenge I built an interactive dashboard to explore the Belly Button B
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
-[Results of the Belly Button Biodiversity](http://127.0.0.1:5501/index.html)
+
+Results of the Belly Button Biodiversity:
+[https://mascee.github.io/belly-button-challenge/](https://mascee.github.io/belly-button-challenge/)
 
